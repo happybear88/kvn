@@ -32,8 +32,7 @@
 
 ### Импорт / настройка маршрутизации
 Здесь пример набора правил
-1. Скопировать набор правил в буфер обмена 
-
+1. Скопировать набор правил в буфер обмена
 ```
 [{"enabled":true,"locked":true,"outboundTag":"direct","protocol":["bittorent"],"remarks":"Torrent - direct"},{"enabled":true,"ip":["geoip:private"],"locked":true,"outboundTag":"direct","remarks":"geoip:private - direct "},{"domain":["geosite:private"],"enabled":true,"locked":true,"outboundTag":"direct","remarks":"geosite:private - direct "},{"enabled":false,"ip":["1.0.0.1","1.1.1.1","8.8.8.8","8.8.4.4"],"locked":true,"outboundTag":"proxy","remarks":"DNS - proxy"},{"domain":["720pier.ru"],"enabled":true,"locked":true,"outboundTag":"proxy","remarks":"RU - Proxy"},{"domain":["reddit.com","nytimes.com"],"enabled":true,"locked":true,"outboundTag":"direct","remarks":"My Domains - direct"},{"domain":["domain:ru","domain:xn--p1ai","ya.ru"],"enabled":true,"locked":true,"outboundTag":"direct","remarks":"RU, РФ - direct"},{"enabled":true,"locked":true,"outboundTag":"proxy","port":"0-65535","remarks":"All other - proxy"}]
 ```
