@@ -3,5 +3,4 @@
 - Настройка сервера (скоро)
 
 ## Техническая информация
-[Принцип работы XHTTP]
-(https://github.com/XTLS/Xray-core/discussions/4113#discussioncomment-11468947)
+[Принцип работы XHTTP](https://github.com/XTLS/Xray-core/discussions/4113#discussioncomment-11468947)
