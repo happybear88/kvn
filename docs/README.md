@@ -1,5 +1,7 @@
 ## Инструкции по настройке XRAY: VLESS XHTTP Reality
 - [Настройка клиентских приложений](/xray-client.md) (Android, Windows, iOS)
-- Настройка сервера
+- Настройка сервера (скоро)
 
-## Техническая документация
+## Техническая информация
+[Принцип работы XHTTP]
+(https://github.com/XTLS/Xray-core/discussions/4113#discussioncomment-11468947)
