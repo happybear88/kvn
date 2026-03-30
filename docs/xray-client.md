@@ -9,6 +9,8 @@
 2. В подразделе Assets выбрать файл APK с universal в имени.
 3. Скачать, установить.
 
+![Screenshot](../images/v2ray-client-download.png)
+
 <div style="text-align: center;">
   <img src="../images/v2ray-client-download.png" alt="Screenshot" style="width: 50%; height: auto;">
 </div>
