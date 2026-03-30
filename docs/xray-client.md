@@ -9,6 +9,8 @@
 2. В подразделе Assets выбрать файл APK с universal в имени.
 3. Скачать, установить.
 
+![screenshot](../images/v2ray-client-download.png)
+
 #### Windows
 [https://github.com/2dust/v2rayN/releases](https://github.com/2dust/v2rayN/releases)
 
@@ -24,6 +26,8 @@
 ### Настройка проксирования приложений (только Android)
 1. Меню ≡  - Выбор приложений - Использовать выбор приложений: включить
 2. Выбрать из списка приложения, которые должны ходить через сервер.
+
+![screenshot](../images/v2rayNG-apps.png)
 
 
 ### Импорт / настройка маршрутизации
