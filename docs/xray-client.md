@@ -8,9 +8,8 @@
 1. Выбрать Latest, не pre-release
 2. В подразделе Assets выбрать файл APK с universal в имени.
 3. Скачать, установить.
-<img src="/images/v2ray-client-download.png" alt="screenshot" width="50%" height="50%">
 
-<img src="../images/v2ray-client-download.png" alt="screenshot" width="50%" height="50%">
+<div style="width: 50%;"><img src="../images/v2ray-client-download.png" alt="Screenshot" style="width: 100%; height: auto;"></div>
 
 #### Windows
 [https://github.com/2dust/v2rayN/releases](https://github.com/2dust/v2rayN/releases)
