@@ -1,4 +1,4 @@
-## Инструкции по настройке сервера XRAY: VLESS XHTTP Reality
+## Инструкции по настройке XRAY: VLESS XHTTP Reality
 - [Настройка клиентских приложений](/xray-client.md) (Android, Windows, iOS)
 - Настройка сервера
 
