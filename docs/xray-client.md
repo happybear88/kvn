@@ -9,7 +9,7 @@
 2. В подразделе Assets выбрать файл APK с universal в имени.
 3. Скачать, установить.
 
-![screenshot](../images/v2ray-client-download.png)
+<img src="../images/v2ray-client-download.png" alt="screenshot" width="50%" height="50%">
 
 #### Windows
 [https://github.com/2dust/v2rayN/releases](https://github.com/2dust/v2rayN/releases)
@@ -27,8 +27,7 @@
 1. Меню ≡  - Выбор приложений - Использовать выбор приложений: включить
 2. Выбрать из списка приложения, которые должны ходить через сервер.
 
-![screenshot](../images/v2rayNG-apps.png)
-
+<img src="../images/v2rayNG-apps.png" alt="screenshot" width="50%" height="50%">
 
 ### Импорт / настройка маршрутизации
 1/ Скопировать набор правил в буфер обмена 
