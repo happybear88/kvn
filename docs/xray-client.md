@@ -108,9 +108,15 @@
 - Правой кнопкой мыши на значке можно вызвать меню быстрого управления приложением.
 
 ### Настройка маршрутизации
-1. В верхнем меню `Настройки` - `Настройки маршрутизации` - `Добавить` - `Импорт правил из буфера обмена`. Там же в поле `Примечания` задайте имя: `Мои правила`.
-2. Дважды нажмите подтвердить.
-3. В нижнем меню выберите из списка `Мои правила`.
+
+#### Добавление маршрутов
+1. Скопируйте эти правила в буфер обмена:
+```
+[{"enabled":true,"locked":true,"outboundTag":"direct","protocol":["bittorrent"],"remarks":"Торрент - напрямую"},{"domain":["geosite:category-ads-all"],"enabled":true,"locked":true,"outboundTag":"block","remarks":"Блокировать рекламу"},{"enabled":true,"ip":["geoip:private"],"locked":true,"outboundTag":"direct","remarks":"Частные сети - напрямую"},{"domain":["geosite:private"],"enabled":true,"locked":true,"outboundTag":"direct","remarks":"Частные домены - напрямую"},{"enabled":true,"ip":["1.0.0.1","1.1.1.1","8.8.8.8","8.8.4.4"],"locked":true,"outboundTag":"proxy","remarks":"DNS - прокси"},{"enabled":true,"ip":["geoip:ru-blocked"],"locked":true,"outboundTag":"proxy","remarks":"Заблокированные IP в РФ - прокси"},{"domain":["geosite:ru-blocked"],"enabled":true,"locked":true,"outboundTag":"proxy","remarks":"Заблокированные домены в РФ - прокси"},{"enabled":true,"ip":["geoip:ru"],"locked":true,"outboundTag":"direct","remarks":"Российские IP - напрямую"},{"enabled":false,"locked":true,"outboundTag":"direct","port":"0-65535","remarks":"Все остальное - напрямую"},{"enabled":true,"locked":true,"outboundTag":"proxy","port":"0-65535","remarks":"Все остальное - прокси"}]
+```
+2. В верхнем меню `Настройки` - `Настройки маршрутизации` - `Добавить` - `Импорт правил из буфера обмена`. Там же в поле `Примечания` задайте имя: `Мои правила`.
+3. Дважды нажмите `Подтвердить`.
+4. В нижнем меню выберите из списка `Мои правила`.
 
 <img src="v2rayn-routing.png" alt="screenshot">
 
