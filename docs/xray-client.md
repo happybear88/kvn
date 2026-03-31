@@ -120,7 +120,8 @@
 
 <img src="v2rayn-routing.png" alt="screenshot">
 
- #### Проверка маршрутов
+#### Проверка маршрутов
+
  В браузере убедитесь, что маршруты работают правильно:
 - [https://www.ident.me/](https://www.ident.me/) - адрес IPv4 на веб-странице совпадает с адресом сервера в v2rayN
 - [https://rutracker.org/](https://rutracker.org/) - открывается ресурс, который заблокировал РКН
