@@ -23,8 +23,8 @@
   - [Управление состоянием приложения и подключений](#управление-состоянием-приложения-и-подключений)
   - [Настройка маршрутизации](#настройка-маршрутизации-1)
 - [iOS](#ios)
-      - [Приложения](#приложения)
-      - [Импорт конфигурации в приложение с помощью ссылки](#импорт-конфигурации-в-приложение-с-помощью-ссылки-2)  
+  - [Приложения](#приложения)
+  - [Импорт конфигурации в приложение с помощью ссылки](#импорт-конфигурации-в-приложение-с-помощью-ссылки-2)  
 - [Диагностика проблем](#диагностика-проблем)
 
 
@@ -79,7 +79,7 @@
 #### Добавление маршрутов
 1. Скопируйте эти правила в буфер обмена:
 ```
-[{"enabled":true,"locked":true,"outboundTag":"direct","protocol":["bittorrent"],"remarks":"Торрент - напрямую"},{"domain":["geosite:category-ads-all"],"enabled":true,"locked":true,"outboundTag":"block","remarks":"Блокировать рекламу"},{"enabled":true,"ip":["geoip:private"],"locked":true,"outboundTag":"direct","remarks":"Частные сети - напрямую"},{"domain":["geosite:private"],"enabled":true,"locked":true,"outboundTag":"direct","remarks":"Частные домены - напрямую"},{"enabled":true,"ip":["1.0.0.1","1.1.1.1","8.8.8.8","8.8.4.4"],"locked":true,"outboundTag":"proxy","remarks":"DNS - прокси"},{"enabled":true,"ip":["geoip:ru-blocked"],"locked":true,"outboundTag":"proxy","remarks":"Заблокированные IP в РФ - прокси"},{"domain":["geosite:ru-blocked"],"enabled":true,"locked":true,"outboundTag":"proxy","remarks":"Заблокированные домены в РФ - прокси"},{"enabled":true,"ip":["geoip:ru"],"locked":true,"outboundTag":"direct","remarks":"Российские IP - напрямую"},{"enabled":false,"locked":true,"outboundTag":"direct","port":"0-65535","remarks":"Все остальное - напрямую"},{"enabled":true,"locked":true,"outboundTag":"proxy","port":"0-65535","remarks":"Все остальное - прокси"}]
+[{"enabled":true,"locked":true,"outboundTag":"direct","protocol":["bittorrent"],"remarks":"Торрент - напрямую"},{"domain":["geosite:category-ads-all"],"enabled":true,"locked":true,"outboundTag":"block","remarks":"Блокировать рекламу"},{"enabled":true,"ip":["geoip:private"],"locked":true,"outboundTag":"direct","remarks":"Частные сети - напрямую"},{"domain":["geosite:private"],"enabled":true,"locked":true,"outboundTag":"direct","remarks":"Частные домены - напрямую"},{"enabled":true,"ip":["1.0.0.1","1.1.1.1","8.8.8.8","8.8.4.4"],"locked":true,"outboundTag":"proxy","remarks":"DNS - прокси"},{"enabled":true,"ip":["geoip:ru-blocked"],"locked":true,"outboundTag":"proxy","remarks":"Заблокированные IP в РФ - прокси"},{"domain":["geosite:ru-blocked"],"enabled":true,"locked":true,"outboundTag":"proxy","remarks":"Заблокированные домены в РФ - прокси"},{"enabled":true,"ip":["geoip:ru"],"locked":true,"outboundTag":"direct","remarks":"Российские IP - напрямую"},{"enabled":true,"locked":true,"outboundTag":"direct","port":"0-65535","remarks":"Все остальное - напрямую"},{"enabled":false,"locked":true,"outboundTag":"proxy","port":"0-65535","remarks":"Все остальное - прокси"}]
 ```
 2. Меню ≡ - `Маршрутизация` - ︙(в правом верхнем углу) - `Импорт правил из буфера обмена`. Согласитесь на удаление существующих правил.
 
@@ -125,7 +125,7 @@
 #### Добавление маршрутов
 1. Скопируйте эти правила в буфер обмена:
 ```
-[{"enabled":true,"locked":true,"outboundTag":"direct","protocol":["bittorrent"],"remarks":"Торрент - напрямую"},{"domain":["geosite:category-ads-all"],"enabled":true,"locked":true,"outboundTag":"block","remarks":"Блокировать рекламу"},{"enabled":true,"ip":["geoip:private"],"locked":true,"outboundTag":"direct","remarks":"Частные сети - напрямую"},{"domain":["geosite:private"],"enabled":true,"locked":true,"outboundTag":"direct","remarks":"Частные домены - напрямую"},{"enabled":true,"ip":["1.0.0.1","1.1.1.1","8.8.8.8","8.8.4.4"],"locked":true,"outboundTag":"proxy","remarks":"DNS - прокси"},{"enabled":true,"ip":["geoip:ru-blocked"],"locked":true,"outboundTag":"proxy","remarks":"Заблокированные IP в РФ - прокси"},{"domain":["geosite:ru-blocked"],"enabled":true,"locked":true,"outboundTag":"proxy","remarks":"Заблокированные домены в РФ - прокси"},{"enabled":true,"ip":["geoip:ru"],"locked":true,"outboundTag":"direct","remarks":"Российские IP - напрямую"},{"enabled":false,"locked":true,"outboundTag":"direct","port":"0-65535","remarks":"Все остальное - напрямую"},{"enabled":true,"locked":true,"outboundTag":"proxy","port":"0-65535","remarks":"Все остальное - прокси"}]
+[{"enabled":true,"locked":true,"outboundTag":"direct","protocol":["bittorrent"],"remarks":"Торрент - напрямую"},{"domain":["geosite:category-ads-all"],"enabled":true,"locked":true,"outboundTag":"block","remarks":"Блокировать рекламу"},{"enabled":true,"ip":["geoip:private"],"locked":true,"outboundTag":"direct","remarks":"Частные сети - напрямую"},{"domain":["geosite:private"],"enabled":true,"locked":true,"outboundTag":"direct","remarks":"Частные домены - напрямую"},{"enabled":true,"ip":["1.0.0.1","1.1.1.1","8.8.8.8","8.8.4.4"],"locked":true,"outboundTag":"proxy","remarks":"DNS - прокси"},{"enabled":true,"ip":["geoip:ru-blocked"],"locked":true,"outboundTag":"proxy","remarks":"Заблокированные IP в РФ - прокси"},{"domain":["geosite:ru-blocked"],"enabled":true,"locked":true,"outboundTag":"proxy","remarks":"Заблокированные домены в РФ - прокси"},{"enabled":true,"ip":["geoip:ru"],"locked":true,"outboundTag":"direct","remarks":"Российские IP - напрямую"},{"enabled":true,"locked":true,"outboundTag":"direct","port":"0-65535","remarks":"Все остальное - напрямую"},{"enabled":false,"locked":true,"outboundTag":"proxy","port":"0-65535","remarks":"Все остальное - прокси"}]
 ```
 2. В верхнем меню `Настройки` - `Настройки маршрутизации` - `Добавить` - `Импорт правил из буфера обмена`. Там же в поле `Примечания` задайте имя: `Мои правила`.
 3. Дважды нажмите `Подтвердить`.
@@ -143,11 +143,12 @@
 
 ## iOS
 ### Приложения
-[OneXray](https://apps.apple.com/ru/app/onexray/id6745748773)
-[V2Box](https://apps.apple.com/us/app/v2box-v2ray-client/id6446814690)
+- [OneXray](https://apps.apple.com/ru/app/onexray/id6745748773)
+- [V2Box](https://apps.apple.com/us/app/v2box-v2ray-client/id6446814690)
 
 ### Импорт конфигурации в приложение с помощью ссылки
-
+1. Скопируйте присланную ссылку вида VLESS:// в буфер обмена.
+2. В приложении нажмите ➕, затем `Импорт из буфера обмена` или похожий пункт.
 
 ## Диагностика проблем
 Здесь возможные проблемы и пути их решения. 
