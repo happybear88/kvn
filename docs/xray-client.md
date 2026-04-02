@@ -34,8 +34,6 @@
 
 - На Android можно настроить обход блокировок только для избранных приложений (Telegram, Instagram, YouTube). В Windows это возможно только для приложений, которые умеют ходить через прокси - например, браузер или Telegram (кроме звонков).
 
-- Для разблокировки конкретных сайтов и IP адресов приложения скачивают специальные файлы - списки заблокированных ресурсов. На эти списки опираются правила маршрутизации трафика.
-
 - С помощью правил маршрутизации настраивается тонкое поведение приложений (если сервер не переопредляет маршруты). Например, браузер будет ходить на заблокированные РКН сайты через прокси, а на все остальные - напрямую. Если зарубежный сайт блокирует пользователей из РФ, на него тоже можно ходить через прокси.
  
 ## Android
@@ -63,23 +61,14 @@
 ### Настройка проксирования отдельных приложений
 Чтобы только выбранные приложения ходили в обход блокировок:
 1. Меню ≡  - `Выбор приложений` - `Использовать выбор приложений`: включить
-2. Выберите из списка приложения, которые должны ходить через сервер.
+2. Выберите из списка приложения, которые должны ходить через сервер. Если вам нужно посещать отдельные заблокированные сайты в браузере, выберите **не основной** браузер.
 
 <img src="v2rayNG-apps.png" alt="screenshot" width="50%" height="50%">
 
-### Настройка маршрутизации
-Сначала нужно указать и скачать правильные файлы ресурсов для обхода блокировок, затем добавить маршруты обхода.
-
-#### Загрузка ресурсов
-1. Меню ≡ - `Файлы ресурсов` - выберите источник runetfreedom.
-2. Загрузите файлы из облака и дождитесь, пока они скачаются (обновятся даты файлов).
-
-<img src="v2ray-assets.png" alt="screenshot" width="50%" height="50%">
-
-#### Добавление маршрутов
+### Добавление маршрутов
 1. Скопируйте эти правила в буфер обмена:
 ```
-[{"enabled":true,"locked":false,"outboundTag":"direct","protocol":["bittorrent"],"remarks":"Торрент - напрямую"},{"domain":["geosite:category-ads-all"],"enabled":true,"locked":false,"outboundTag":"block","remarks":"Блокировать рекламу"},{"enabled":true,"ip":["geoip:private"],"locked":false,"outboundTag":"direct","remarks":"Частные сети - напрямую"},{"domain":["geosite:private"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Частные домены - напрямую"},{"enabled":true,"ip":["1.0.0.1","1.1.1.1","8.8.8.8","8.8.4.4"],"locked":false,"outboundTag":"proxy","remarks":"DNS - прокси"},{"enabled":true,"ip":["geoip:ru-blocked"],"locked":false,"outboundTag":"proxy","remarks":"Заблокированные IP в РФ - прокси"},{"domain":["geosite:ru-blocked"],"enabled":true,"locked":false,"outboundTag":"proxy","remarks":"Заблокированные домены в РФ - прокси"},{"domain":["ident.me"],"enabled":true,"locked":false,"outboundTag":"proxy","remarks":"Избранные сайты - прокси"},{"enabled":true,"ip":["geoip:ru"],"locked":false,"outboundTag":"direct","remarks":"Российские IP - напрямую"},{"enabled":false,"locked":false,"outboundTag":"direct","port":"0-65535","remarks":"Все остальное - напрямую"},{"enabled":true,"locked":false,"outboundTag":"proxy","port":"0-65535","remarks":"Все остальное - прокси"}]
+[{"enabled":true,"locked":false,"outboundTag":"direct","protocol":["bittorent"],"remarks":"Торрент - напрямую"},{"enabled":true,"ip":["geoip:private"],"locked":false,"outboundTag":"direct","remarks":"Частные сети - напрямую"},{"domain":["geosite:private"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Частные домены - напрямую"},{"enabled":false,"ip":["1.0.0.1","1.1.1.1","8.8.8.8","8.8.4.4"],"locked":false,"outboundTag":"proxy","remarks":"DNS - прокси"},{"domain":["ident.me"],"enabled":true,"locked":false,"outboundTag":"proxy","remarks":"Избранные сайты - прокси"},{"domain":["reddit.com","nytimes.com"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Избранные сайты - напрямую"},{"domain":["domain:ru","domain:xn--p1ai"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Сайты .RU и .РФ - напрямую"},{"enabled":true,"locked":false,"outboundTag":"proxy","port":"0-65535","remarks":"Все остальное - прокси"}]
 ```
 2. Меню ≡ - `Маршрутизация` - ︙(в правом верхнем углу) - `Импорт правил из буфера обмена`. Согласитесь на удаление существующих правил.
 
@@ -116,22 +105,17 @@
 - Правой кнопкой мыши на значке можно вызвать меню быстрого управления приложением.
 
 ### Настройка маршрутизации
-Сначала нужно указать и скачать правильные файлы ресурсов для обхода блокировок, затем добавить маршруты обхода.
 
-#### Загрузка ресурсов
-1. В верхнем меню `Настройки` - `Настройка параметров` - `Настройки v2rayN` - `Источник файлов Geo` - выберите runetfreedom и нажмите `Подтвердить`.
-2. В верхнем меню `Помощь` - `Проверить обновления` - 'GeoFiles'.
-
-#### Добавление маршрутов
+### Добавление маршрутов
 1. Скопируйте эти правила в буфер обмена:
 ```
-[{"enabled":true,"locked":false,"outboundTag":"direct","protocol":["bittorrent"],"remarks":"Торрент - напрямую"},{"domain":["geosite:category-ads-all"],"enabled":true,"locked":false,"outboundTag":"block","remarks":"Блокировать рекламу"},{"enabled":true,"ip":["geoip:private"],"locked":false,"outboundTag":"direct","remarks":"Частные сети - напрямую"},{"domain":["geosite:private"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Частные домены - напрямую"},{"enabled":true,"ip":["1.0.0.1","1.1.1.1","8.8.8.8","8.8.4.4"],"locked":false,"outboundTag":"proxy","remarks":"DNS - прокси"},{"enabled":true,"ip":["geoip:ru-blocked"],"locked":false,"outboundTag":"proxy","remarks":"Заблокированные IP в РФ - прокси"},{"domain":["geosite:ru-blocked"],"enabled":true,"locked":false,"outboundTag":"proxy","remarks":"Заблокированные домены в РФ - прокси"},{"domain":["ident.me"],"enabled":true,"locked":false,"outboundTag":"proxy","remarks":"Избранные сайты - прокси"},{"enabled":true,"ip":["geoip:ru"],"locked":false,"outboundTag":"direct","remarks":"Российские IP - напрямую"},{"enabled":false,"locked":false,"outboundTag":"direct","port":"0-65535","remarks":"Все остальное - напрямую"},{"enabled":true,"locked":false,"outboundTag":"proxy","port":"0-65535","remarks":"Все остальное - прокси"}]
+[{"enabled":true,"locked":false,"outboundTag":"direct","protocol":["bittorent"],"remarks":"Торрент - напрямую"},{"enabled":true,"ip":["geoip:private"],"locked":false,"outboundTag":"direct","remarks":"Частные сети - напрямую"},{"domain":["geosite:private"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Частные домены - напрямую"},{"enabled":false,"ip":["1.0.0.1","1.1.1.1","8.8.8.8","8.8.4.4"],"locked":false,"outboundTag":"proxy","remarks":"DNS - прокси"},{"domain":["ident.me"],"enabled":true,"locked":false,"outboundTag":"proxy","remarks":"Избранные сайты - прокси"},{"domain":["reddit.com","nytimes.com"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Избранные сайты - напрямую"},{"domain":["domain:ru","domain:xn--p1ai"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Сайты .RU и .РФ - напрямую"},{"enabled":true,"locked":false,"outboundTag":"proxy","port":"0-65535","remarks":"Все остальное - прокси"}]
 ```
 2. В верхнем меню `Настройки` - `Настройки маршрутизации` - `Добавить` - `Импорт правил из буфера обмена`. Там же в поле `Примечания` задайте имя: `Мои правила`.
 3. Дважды нажмите `Подтвердить`.
 4. В нижнем меню выберите из списка `Мои правила`.
 
-<img src="v2rayn-routing.png" alt="screenshot">
+<img src="v2rayn-routing-basic.png" alt="screenshot">
 
 #### Проверка маршрутов
 
