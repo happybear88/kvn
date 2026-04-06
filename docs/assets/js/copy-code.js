@@ -12,16 +12,22 @@ document.addEventListener("DOMContentLoaded", () => {
           .writeText(block.textContent)
           .then(() => {
             button.textContent = "Copied!";
+            button.classList.add("copied");
             setTimeout(() => {
               button.textContent = "Copy";
+              button.classList.remove("copied");
             }, 2000);
           })
           .catch((err) => {
             console.error("Copy failed:", err);
+            button.textContent = "Failed!";
+            setTimeout(() => {
+              button.textContent = "Copy";
+            }, 2000);
           });
       });
 
-      // Insert button at top‑right of the <pre>
+      // Insert button at top-right of the <pre>
       block.parentNode.style.position = "relative";
       block.parentNode.appendChild(button);
     });
