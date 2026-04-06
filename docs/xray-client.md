@@ -84,7 +84,6 @@
 
 ### Добавление маршрутов
 1. Скопируйте эти правила в буфер обмена:
-
 ```
 [{"enabled":true,"locked":false,"outboundTag":"direct","protocol":["bittorent"],"remarks":"Торрент - напрямую"},{"enabled":true,"ip":["geoip:private"],"locked":false,"outboundTag":"direct","remarks":"Частные сети - напрямую"},{"domain":["geosite:private"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Частные домены - напрямую"},{"enabled":false,"ip":["1.0.0.1","1.1.1.1","8.8.8.8","8.8.4.4"],"locked":false,"outboundTag":"proxy","remarks":"DNS - прокси"},{"domain":["ident.me"],"enabled":true,"locked":false,"outboundTag":"proxy","remarks":"Избранные сайты - прокси"},{"domain":["reddit.com","nytimes.com"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Избранные сайты - напрямую"},{"domain":["domain:ru","domain:xn--p1ai"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Сайты .RU и .РФ - напрямую"},{"enabled":true,"locked":false,"outboundTag":"proxy","port":"0-65535","remarks":"Все остальное - прокси"}]
 ```
@@ -133,7 +132,6 @@ __Скоро__
 
 ### Добавление маршрутов
 1. Скопируйте эти правила в буфер обмена:
-
 ```
 [{"enabled":true,"locked":false,"outboundTag":"direct","protocol":["bittorent"],"remarks":"Торрент - напрямую"},{"enabled":true,"ip":["geoip:private"],"locked":false,"outboundTag":"direct","remarks":"Частные сети - напрямую"},{"domain":["geosite:private"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Частные домены - напрямую"},{"enabled":false,"ip":["1.0.0.1","1.1.1.1","8.8.8.8","8.8.4.4"],"locked":false,"outboundTag":"proxy","remarks":"DNS - прокси"},{"domain":["ident.me"],"enabled":true,"locked":false,"outboundTag":"proxy","remarks":"Избранные сайты - прокси"},{"domain":["reddit.com","nytimes.com"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Избранные сайты - напрямую"},{"domain":["domain:ru","domain:xn--p1ai"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Сайты .RU и .РФ - напрямую"},{"enabled":true,"locked":false,"outboundTag":"proxy","port":"0-65535","remarks":"Все остальное - прокси"}]
 ```
