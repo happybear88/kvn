@@ -7,28 +7,93 @@
 
 - Если инструкции вызывают затруднения, обратитесь к подрастающему поколению 😎
 
-## Содержание
+<script src="https://cdn.jsdelivr.net/npm/@uzairfarooq/toc@1.3.2/dist/toc.min.js"></script>
+<div id="toc"></div>
+<script>
+  Toc.init({
+    outerWrapper: '#toc',
+    header: '#',
+    title: 'Содержание',
+    auto: true,
+    minimumHeadings: 1,
+    scrollSmooth: true,
+    scrollOffset: 0,
+    scrollContainer: null,
+    mobileOffset: 100,
+    listClass: 'toc-list',
+    listItemClass: 'toc-list-item',
+    level1Class: 'toc-level-1',
+    level2Class: 'toc-level-2',
+    level3Class: 'toc-level-3',
+    level4Class: 'toc-level-4',
+    level5Class: 'toc-level-5',
+    level6Class: 'toc-level-6',
+    collapseState: 'active',
+    collapseContainer: null,
+    onlyHeadings: null,
+    excludeHeadings: null,
+    headerLabel: 'Содержание',
+    headerClass: 'toc-header',
+    headerHtml: null,
+    generateId: null,
+    onInit: null,
+    onToggle: null,
+    onScroll: null
+  });
+</script>
 
-- [Как работает обход блокировок](#как-работает-обход-блокировок)
-- [Android](#android)
-  - [Загрузка и установка](#загрузка-и-установка)
-  - [Импорт конфигурации в приложение](#импорт-конфигурации-в-приложение)
-    - [Импорт серверов с помощью ссылки](#импорт-серверов-с-помощью-ссылки)
-    - [Импорт серверов с помощью подписки](#импорт-серверов-с-помощью-подписки)
-  - [Управление состоянием подключения](#управление-состоянием-подключения)
-  - [Выбор отдельных приложений](#выбор-отдельных-приложений)
-  - [Настройка маршрутизации](#настройка-маршрутизации)
-- [Windows](#windows)
-  - [Загрузка и установка](#загрузка-и-установка-1)
-  - [Импорт конфигурации в приложение с помощью ссылки](#импорт-конфигурации-в-приложение-с-помощью-ссылки-1)
-  - [Активация подключения к серверу (режим прокси)](#активация-подключения-к-серверу-режим-прокси)
-  - [Управление состоянием приложения и подключений](#управление-состоянием-приложения-и-подключений)
-  - [Настройка маршрутизации](#настройка-маршрутизации-1)
-- [iOS](#ios)
-  - [Приложения](#приложения)
-  - [Импорт конфигурации в приложение с помощью ссылки](#импорт-конфигурации-в-приложение-с-помощью-ссылки-2)  
-- [Диагностика проблем](#диагностика-проблем)
-
+<style>
+  #toc {
+    position: sticky;
+    top: 20px;
+    max-height: 80vh;
+    overflow-y: auto;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 1rem 0;
+  }
+  
+  #toc .toc-header {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #333;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 0.5rem;
+  }
+  
+  #toc .toc-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  #toc .toc-list-item {
+    margin: 0.2rem 0;
+  }
+  
+  #toc a {
+    color: #007bff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  #toc a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+  }
+  
+  @media (max-width: 768px) {
+    #toc {
+      position: relative;
+      top: 0;
+      max-height: none;
+      margin: 1rem -1rem;
+      border-radius: 0;
+    }
+  }
+</style>
 
 ## Как работает обход блокировок
 
@@ -118,7 +183,21 @@
 2. Щелкните мышью в верхней части окна и нажмите **Ctrl+V**. Либо щелкните **Серверы** - **Импорт массива URL из буфера обмена**.
 
 #### Импорт серверов с помощью подписки
-__Скоро__
+1. Скопируйте присланную вам веб-ссылку в буфер обмена.
+2. В верхнем меню **Группа подписки** - **Настройка группы подписки**
+3. Нажмите **Добавить" и заполните поля
+  - **Примечание**: любое понятное вам
+  - **URL (необязательно)**: вставьте ссылку из буфера обмена - для вас это обязательно!
+4. Нажмите **Подтвердить** и вернитесь на главный экран.
+
+<img src="v2rayn-subs.png" alt="screenshot">
+
+#### Обновление подписки
+Чтобы получить список серверов из подписки, нажмите в верхнем меню **Группа подписки** и выберите любой вариант обновления. Список серверов пополнится новыми.
+
+<img src="v2rayn-subs-update.png" alt="screenshot">
+
+**Примечание**. Старые серверы может понадобиться удалить вручную.
 
 ### Активация подключения к серверу (режим прокси)
 1. Выделите подключение в списке и нажмите Enter либо щелкните **Перезагрузка** в верхнем меню.
