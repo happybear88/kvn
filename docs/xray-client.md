@@ -7,93 +7,36 @@
 
 - Если инструкции вызывают затруднения, обратитесь к подрастающему поколению 😎
 
-<script src="https://cdn.jsdelivr.net/npm/@uzairfarooq/toc@1.3.2/dist/toc.min.js"></script>
-<div id="toc"></div>
-<script>
-  Toc.init({
-    outerWrapper: '#toc',
-    header: '#',
-    title: 'Содержание',
-    auto: true,
-    minimumHeadings: 1,
-    scrollSmooth: true,
-    scrollOffset: 0,
-    scrollContainer: null,
-    mobileOffset: 100,
-    listClass: 'toc-list',
-    listItemClass: 'toc-list-item',
-    level1Class: 'toc-level-1',
-    level2Class: 'toc-level-2',
-    level3Class: 'toc-level-3',
-    level4Class: 'toc-level-4',
-    level5Class: 'toc-level-5',
-    level6Class: 'toc-level-6',
-    collapseState: 'active',
-    collapseContainer: null,
-    onlyHeadings: null,
-    excludeHeadings: null,
-    headerLabel: 'Содержание',
-    headerClass: 'toc-header',
-    headerHtml: null,
-    generateId: null,
-    onInit: null,
-    onToggle: null,
-    onScroll: null
-  });
-</script>
+## Содержание
 
-<style>
-  #toc {
-    position: sticky;
-    top: 20px;
-    max-height: 80vh;
-    overflow-y: auto;
-    padding: 1rem;
-    background: #f8f9fa;
-    border-radius: 8px;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    margin: 1rem 0;
-  }
-  
-  #toc .toc-header {
-    font-size: 1.2em;
-    font-weight: bold;
-    margin-bottom: 1rem;
-    color: #333;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 0.5rem;
-  }
-  
-  #toc .toc-list {
-    list-style: none;
-    padding-left: 0;
-  }
-  
-  #toc .toc-list-item {
-    margin: 0.2rem 0;
-  }
-  
-  #toc a {
-    color: #007bff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  #toc a:hover {
-    color: #0056b3;
-    text-decoration: underline;
-  }
-  
-  @media (max-width: 768px) {
-    #toc {
-      position: relative;
-      top: 0;
-      max-height: none;
-      margin: 1rem -1rem;
-      border-radius: 0;
-    }
-  }
-</style>
+- [# Настройка приложений для подключения к серверу XRAY](#настройка-приложений-для-подключения-к-серверу-xray)
+- [## Как работает обход блокировок](#как-работает-обход-блокировок)
+- [## Android](#android)
+  - [### Загрузка и установка](#загрузка-и-установка)
+  - [#### Импорт конфигурации в приложение](#импорт-конфигурации-в-приложение)
+    - [##### Импорт серверов с помощью ссылки](#импорт-серверов-с-помощью-ссылки)
+    - [##### Импорт серверов с помощью подписки](#импорт-серверов-с-помощью-подписки)
+  - [### Управление состоянием подключения](#управление-состоянием-подключения)
+  - [### Выбор отдельных приложений](#выбор-отдельных-приложений)
+  - [### Добавление маршрутов](#добавление-маршрутов)
+  - [#### Проверка маршрутов](#проверка-маршрутов)
+- [## Windows](#windows)
+  - [### Загрузка и установка](#загрузка-и-установка-1)
+  - [### Импорт конфигурации в приложение](#импорт-конфигурации-в-приложение-1)
+    - [#### Импорт серверов с помощью ссылки](#импорт-серверов-с-помощью-ссылки-1)
+    - [#### Импорт серверов с помощью подписки](#импорт-серверов-с-помощью-подписки-1)
+  - [### Активация подключения к серверу](#активация-подключения-к-серверу-режим-прокси)
+  - [### Управление состоянием приложения](#управление-состоянием-приложения-и-подключений)
+  - [### Настройка маршрутизации](#настройка-маршрутизации)
+  - [### Добавление маршрутов](#добавление-маршрутов-1)
+  - [#### Проверка маршрутов](#проверка-маршрутов-1)
+- [## iOS](#ios)
+  - [### Приложения](#приложения)
+  - [### Импорт конфигурации в приложение](#импорт-конфигурации-в-приложение-с-помощью-ссылки)
+- [## Диагностика проблем](#диагностика-проблем)
+  - [### Сбор логов](#сбор-логов)
+    - [#### Android](#android-1)
+    - [#### Windows](#windows-1)
 
 ## Как работает обход блокировок
 
