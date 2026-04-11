@@ -23,19 +23,15 @@ passwd root
 ```
 ssh
 ```
-
 Если не найден, в Windows включить: Win+I - Manage optional features - включить OpenSSH client 
-
 2. Создать пару ключей (принять дефолты, сгенерировать и сохранить парольную фразу). Файлы будут сохранены в %userprofile%\.ssh.
 ```
 ssh-keygen -t rsa
 ```
-
 3. Скопировать ключи на сервер:
 ```
 cat ~/.ssh/id_rsa.pub | ssh user@ip "mkdir -p ~/.ssh && chmod 700 ~/.ssh && cat >> ~/.ssh/authorized_keys"
 ```
-
 #### Подключение к VPS по сертификату
 **Примечание**. В Windows должна быть папка **.ssh** в корне профиля с файлами **id_rsa.pub** и **id_rsa**. 
 
@@ -81,45 +77,32 @@ sudo ufw status numbered
 1. Определить последнюю стабильную версию: [https://github.com/XTLS/Xray-core/releases/](https://github.com/XTLS/Xray-core/releases/)
 
 2. Подставить номер версии в команду установки вместо 26.2.6
-
 ```
 sudo bash -c "$(curl -L https://raw.githubusercontent.com/XTLS/Xray-install/046d9aa2432b3a6241d73c3684ef4e512974b594/install-release.sh)" @ install --version 26.2.6
 ```
-
 3. Включить сервер
-
 ```
 sudo systemctl enable xray
 ```
-
 4. Сгенерировать пару ключей и short ID
-
 ```
 /usr/local/bin/xray x25519 #key pair
 openssl rand -hex 8 #shortid
 ```
-
 5. Сгенерировать UUID - лучше создавать свой для каждого человека
-
 ```
 /usr/local/bin/xray uuid #uuid
 ```
-
 6. Создать конфигурационный файл (пример ниже)
-
 ```
 sudo nano /usr/local/etc/xray/config.json
 ```
-
 Вставить туда содержимое файла и сохранить Ctrl+X.
-
 7. Запустить сервер
 Команда перезапускает сервер, отображает статус и отслеживает лог.
-
 ```
 sudo systemctl restart xray && sudo systemctl status xray && sudo journalctl -u xray -f
 ```
-
 ### Конфигурационный файл сервера
 Пример файла для VLESS XTLS REALITY. В нем необходимо прописать:
 - Приватный ключ сервера из шага 4 выше
