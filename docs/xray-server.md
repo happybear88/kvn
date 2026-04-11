@@ -23,7 +23,8 @@ passwd root
 ```
 ssh
 ```
-Если не найден, в Windows включить: Win+I - Manage optional features - включить OpenSSH client 
+Если не найден, в Windows включить: Win+I - Manage optional features - включить OpenSSH client.
+
 2. Создать пару ключей (принять дефолты, сгенерировать и сохранить парольную фразу). Файлы будут сохранены в %userprofile%\.ssh.
 ```
 ssh-keygen -t rsa
@@ -98,7 +99,9 @@ openssl rand -hex 8 #shortid
 sudo nano /usr/local/etc/xray/config.json
 ```
 Вставить туда содержимое файла и сохранить Ctrl+X.
+
 7. Запустить сервер
+
 Команда перезапускает сервер, отображает статус и отслеживает лог.
 ```
 sudo systemctl restart xray && sudo systemctl status xray && sudo journalctl -u xray -f
