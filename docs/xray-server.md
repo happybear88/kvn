@@ -129,3 +129,4 @@ sudo systemctl restart xray && sudo systemctl status xray && sudo journalctl -u 
 
 
 Здесь базовый вариант с единственной [зарубежной] VPS. Более сложные конфигурации с цепочкой могут быть рассмотрены позже. 
+_скоро_
