@@ -108,7 +108,7 @@
 ### Добавление маршрутов в v2rayNG
 1. Скопируйте эти правила в буфер обмена:
 ```
-[{"enabled":true,"locked":false,"outboundTag":"direct","protocol":["bittorent"],"remarks":"Торрент - напрямую"},{"enabled":true,"ip":["geoip:private"],"locked":false,"outboundTag":"direct","remarks":"Частные сети - напрямую"},{"domain":["geosite:private"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Частные домены - напрямую"},{"enabled":false,"ip":["1.0.0.1","1.1.1.1","8.8.8.8","8.8.4.4"],"locked":false,"outboundTag":"proxy","remarks":"DNS - прокси"},{"domain":["ident.me"],"enabled":true,"locked":false,"outboundTag":"proxy","remarks":"Избранные сайты - прокси"},{"domain":["yandex.net"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Избранные сайты - напрямую"},{"domain":["geosite:category-ru"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Российские домены - напрямую"},{"domain":["domain:ru","domain:xn--p1ai"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Домены .RU, .РФ - напрямую"},{"enabled":true,"ip":["geoip:ru"],"locked":false,"outboundTag":"direct","remarks":"Российские IP - напрямую"},{"enabled":true,"locked":false,"outboundTag":"proxy","port":"0-65535","remarks":"Все остальное - прокси"}]
+[{"enabled":true,"locked":false,"network":"udp","outboundTag":"block","port":"443","remarks":"Блокировать QUIC"},{"enabled":true,"locked":false,"outboundTag":"direct","protocol":["bittorent"],"remarks":"Торрент - напрямую"},{"enabled":true,"ip":["geoip:private"],"locked":false,"outboundTag":"direct","remarks":"Частные сети - напрямую"},{"domain":["geosite:private"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Частные домены - напрямую"},{"enabled":false,"ip":["1.0.0.1","1.1.1.1","8.8.8.8","8.8.4.4"],"locked":false,"outboundTag":"proxy","remarks":"DNS - прокси"},{"domain":["720pier.ru"],"enabled":true,"locked":false,"outboundTag":"proxy","remarks":"Избранные сайты - прокси"},{"domain":["geosite:category-ip-geo-detect"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Сервисы определения IP - напрямую"},{"domain":["yandex.net","yastatic.net"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Избранные сайты - напрямую"},{"domain":["geosite:category-ru"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Российские домены - напрямую"},{"domain":["domain:ru","domain:xn--p1ai"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Домены .RU, .РФ - напрямую"},{"enabled":true,"ip":["geoip:ru"],"locked":false,"outboundTag":"direct","remarks":"Российские IP - напрямую"},{"enabled":true,"locked":false,"outboundTag":"proxy","port":"0-65535","remarks":"Все остальное - прокси"}]
 ```
 
 2. Меню ≡ - **Маршрутизация** - ︙(в правом верхнем углу) - **Импорт правил из буфера обмена**. Согласитесь на удаление существующих правил.
@@ -185,7 +185,9 @@
 ### Активация подключения к серверу (режим прокси)
 1. Выделите подключение в списке и нажмите Enter либо щелкните **Перезагрузка** в верхнем меню.
 2. Внизу приложения выберите из списка **Установить системный прокси**.
-3. Проверьте работу прокси, перейдя в браузере по ссылке [https://www.ident.me/](https://www.ident.me/). Адрес IPv4 на веб-странице должен быть зарубежным.
+3. Проверьте работу прокси, перейдя в браузере по ссылкaм:
+  - [https://rutracker.org/](https://rutracker.org/) - ресурс, который заблокировал РКН
+  - [https://www.strava.com/](https://www.strava.com) - ресурс, который сам заблокировал доступ из РФ
 
 <img src="v2rayn-proxy.png" alt="screenshot">
 
@@ -197,6 +199,8 @@
 ### Настройка маршрутизации
 
 ### Добавление маршрутов
+Набор правил несколько отличается от того, что используется на Android. 
+
 1. Скопируйте эти правила в буфер обмена:
 ```
 [{"enabled":true,"locked":false,"outboundTag":"direct","protocol":["bittorent"],"remarks":"Торрент - напрямую"},{"enabled":true,"ip":["geoip:private"],"locked":false,"outboundTag":"direct","remarks":"Частные сети - напрямую"},{"domain":["geosite:private"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Частные домены - напрямую"},{"enabled":false,"ip":["1.0.0.1","1.1.1.1","8.8.8.8","8.8.4.4"],"locked":false,"outboundTag":"proxy","remarks":"DNS - прокси"},{"domain":["ident.me"],"enabled":true,"locked":false,"outboundTag":"proxy","remarks":"Избранные сайты - прокси"},{"domain":["yandex.net"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Избранные сайты - напрямую"},{"domain":["geosite:category-ru"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Российские домены - напрямую"},{"domain":["domain:ru","domain:xn--p1ai"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Домены .RU, .РФ - напрямую"},{"enabled":true,"ip":["geoip:ru"],"locked":false,"outboundTag":"direct","remarks":"Российские IP - напрямую"},{"enabled":true,"locked":false,"outboundTag":"proxy","port":"0-65535","remarks":"Все остальное - прокси"}]
@@ -212,10 +216,10 @@
 #### Проверка маршрутов
 
 Перезапустите подключение и убедитесь, что маршруты работают правильно:
-- [https://www.ident.me/](https://www.ident.me/) - адрес IPv4 на веб-странице зарубежный
 - [https://rutracker.org/](https://rutracker.org/) - открывается ресурс, который заблокировал РКН
 - [https://www.strava.com/](https://www.strava.com) - открывается ресурс, который сам заблокировал доступ из РФ
 
+Примечание. В зависимости от набора правил маршрутизации на клиенте и сервере, зарубежные сервисы определения ip-адреса могут показывать адрес вашего провайдера либо не открываться вообще.
 
 ## iOS
 ### Приложения
