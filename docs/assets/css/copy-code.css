@@ -1,6 +1,14 @@
 body {
     font: 16px/1.6 "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
 }
+code {
+    font-family: Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
+    color: #efefef;
+    font-size: 14px;
+    margin: 0 4px;
+    padding: 1px 1px !important;
+    border-radius: 2px
+}
 pre {
   position: relative !important;
   padding-top: 2.8rem !important;  /* Permanent space */
