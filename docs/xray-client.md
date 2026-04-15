@@ -64,7 +64,7 @@
 [https://github.com/2dust/v2rayNG/releases/](https://github.com/2dust/v2rayNG/releases/)
 
 1. Выберите Latest, нежели pre-release
-2. В подразделе Assets выбрерите файл APK с **universal** в имени.
+2. В подразделе Assets выберите файл APK с **universal** в имени.
 3. Скачайте, установите.
 
 <img src="v2ray-client-download.png" alt="Screenshot" style="width: 40%; height: auto;">
@@ -131,7 +131,7 @@
 [https://github.com/MatsuriDayo/NekoBoxForAndroid/releases](https://github.com/MatsuriDayo/NekoBoxForAndroid/releases)
 
 1. Выберите Latest, нежели pre-release
-2. В подразделе Assets выбрерите файл APK с **arm64-v8a** в имени.
+2. В подразделе Assets выберите файл APK с **arm64-v8a** в имени.
 3. Скачайте, установите.
 
 <img src="nekobox-client-download.png" alt="Screenshot" style="width: 40%; height: auto;">
@@ -198,7 +198,7 @@
 
 1. Установите [Firefox](https://www.firefox.com/).
 2. Меню ≡ - **Настройки** - (внизу) **Настройки прокси** - задайте SOCKS сервер `127.0.0.1` на порту `10808`.
-3. Проверьте работу прокси, перейдя в браузере по ссылкaм:
+3. Проверьте работу прокси, перейдя в браузере по ссылкам:
   - [https://rutracker.org/](https://rutracker.org/) - ресурс, который заблокировал РКН
   - [https://www.strava.com/](https://www.strava.com) - ресурс, который сам заблокировал доступ из РФ
 
@@ -257,7 +257,7 @@
 Здесь возможные проблемы и пути их решения. 
 
 ### Сбор логов
-Вас могут попросить предоставить логи, например, когда не удается подкюлчиться к серверу.
+Вас могут попросить предоставить логи, например, когда не удается подключиться к серверу.
 
 #### Android v2rayNG
 1. Меню ≡ - **Настройки** - **Подробность ведения журнала**: warning.
