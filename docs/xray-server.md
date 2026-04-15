@@ -130,6 +130,6 @@ sudo systemctl restart xray && sudo systemctl status xray && sudo journalctl -u 
   `.\RealiTLScanner-windows-64.exe -addr <VPS IP>`
   -  крупный чужой домен в стране сервера
 
-## Сервер 1 в РФ
+#### Сервер 1 в РФ
 
 _скоро_
