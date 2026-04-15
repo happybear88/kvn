@@ -1,3 +1,6 @@
+body {
+    font: 16px/1.6 "OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
+}
 pre {
   position: relative !important;
   padding-top: 2.8rem !important;  /* Permanent space */
