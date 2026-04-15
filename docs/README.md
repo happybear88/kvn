@@ -3,7 +3,7 @@
 - [Настройка сервера XRAY](xray-client.md)
 
 ## Особенности использования VPN на смартфонах
-- [Использование VPN при противодействии приложений](vpn-spies.md)
+- [Использование VPN в условиях противодействия приложений](vpn-spies.md)
 
 ## Техническая информация
 - [Принцип работы XHTTP](https://github.com/XTLS/Xray-core/discussions/4113#discussioncomment-11468947)
