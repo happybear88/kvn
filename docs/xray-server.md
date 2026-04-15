@@ -117,6 +117,7 @@ sudo nano /usr/local/etc/xray/config.json
 ```
 sudo systemctl restart xray && sudo systemctl status xray && sudo journalctl -u xray -f
 ```
+
 ### Конфигурационныые файлы
 Здесь вариант со схемой **Сервер 1 в РФ -> Сервер 2 за рубежом**. Для подключений к серверам используется VLESS XTLS REALITY. Еще один зарубежный сервер настраивается аналогично. 
 
