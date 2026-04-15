@@ -275,3 +275,5 @@
 <img src="v2rayn-logs.png" alt="screenshot"> 
 
 &#63743;
+
+&#xF8FF;
