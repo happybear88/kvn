@@ -18,15 +18,27 @@
 Везде `@ip` означает, что надо подставить свой IP. То же самое касается `user`, если вы хотите использовать другое имя пользователя.
 
 ### Добавление пользователя и смена пароля рута 
+
+Добавление пользователя `user`
 ```
 ssh root@ip
 useradd -m user
 passwd user
 usermod -aG sudo user #Add to sudoers
+exit
 ```
+
+Исправление вставки в терминал
 ```
 ssh user@ip
-passwd root
+sudo chsh -s /bin/bash $(whoami) #terminal fix
+exit
+```
+
+Смена пароля рута
+```
+ssh user@ip
+sudo passwd root
 ```
 
 ### Настройка доступа SSH по сертификату
