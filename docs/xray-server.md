@@ -28,7 +28,7 @@ usermod -aG sudo user #Add to sudoers
 exit
 ```
 
-Исправление вставки в терминал
+Исправление вставки правой кнопкой мыши в терминал
 ```
 ssh user@ip
 sudo chsh -s /bin/bash $(whoami) #terminal fix
@@ -74,11 +74,44 @@ ssh -i "$env:userprofile\.ssh\id_rsa" user@ip
 sudo nano /etc/ssh/sshd_config
 ```
 
-Найти **passwordauthentication** и установить **No**
+В конце файла вставить:
+```
+PasswordAuthentication no
+KbdInteractiveAuthentication no
+ChallengeResponseAuthentication no
+UsePAM no
+AuthenticationMethods publickey
+PubkeyAuthentication yes
+```
+
+Проверить текущие разрешения:
+```
+sudo sshd -T | grep -E 'password|kbd|challenge|pam|authentication'
+```
+
+Если значения не соответствуют заданным (например, `passwordauthentication no`), надо выявить файл, который переопределяет конфигурацию. Продолжая пример с парольной аутентификацией:
+```
+sudo grep -r PasswordAuthentication /etc/ssh/
+```
+
+Например, при таком выводе:
+```
+/etc/ssh/sshd_config.d/60-cloudimg-settings.conf:PasswordAuthentication no
+/etc/ssh/sshd_config.d/50-cloud-init.conf:PasswordAuthentication yes
+/etc/ssh/sshd_config.ucf-dist:PasswordAuthentication no
+```
+переопределяет файл `50-cloud-init.conf`. Надо изменить значение в нем:
 
 ```
-sudo reboot
+sudo nano /etc/ssh/sshd_config.d/50-cloud-init.conf
 ```
+
+Перезапустить ssh:
+```
+sudo systemctl restart ssh
+```
+
+и проверить доступ к хосту извне: `ssh user@ip`. Должно быть сообщение `Permission denied (publickey)`.
 
 ### Обновление и установка нужных пакетов
 curl и ufw могут быть установлены в Ubuntu
