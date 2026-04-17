@@ -78,10 +78,11 @@ PubkeyAuthentication yes
 
 Проверить текущие разрешения:
 ```
+sudo sshd -T | grep -i passwordauthentication
 sudo sshd -T | grep -E 'password|kbd|challenge|pam|authentication'
 ```
 
-Если значения не соответствуют заданным (например, `passwordauthentication no`), надо выявить файл, который переопределяет конфигурацию. Продолжая пример с парольной аутентификацией:
+В пределах одного файла последнее значение имеет приоритет. Если в других файлах значения не соответствуют заданным (например, `passwordauthentication no`), надо выявить файл, который может переопределяет конфигурацию. Продолжая пример с парольной аутентификацией:
 ```
 sudo grep -r PasswordAuthentication /etc/ssh/
 ```
