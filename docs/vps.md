@@ -31,7 +31,7 @@ sudo chsh -s /bin/bash $(whoami) #terminal fix
 exit
 ```
 
-## Настройка доступа SSH по сертификату
+## Настройка доступа SSH посредством пары ключей
 Это надежно и безопасно. 
 
 ### Создание и копирование ключей
@@ -52,7 +52,7 @@ ssh-keygen -t rsa
 cat ~/.ssh/id_rsa.pub | ssh user@ip "mkdir -p ~/.ssh && chmod 700 ~/.ssh && cat >> ~/.ssh/authorized_keys"
 ```
 
-### Подключение к VPS по сертификату
+### Подключение к VPS с приватным ключом
 **Примечание**. В Windows должна быть папка **.ssh** в корне профиля с файлами **id_rsa.pub** и **id_rsa**. 
 
 ```
