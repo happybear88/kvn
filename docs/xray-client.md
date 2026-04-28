@@ -74,7 +74,7 @@
 <img src="v2ray-client-download.png" alt="Screenshot" style="width: 40%; height: auto;">
 
 ### Импорт полной конфигурации в v2rayNG
-В общем случае полную конфигурацию составляют настройки приложения, правила маршрутизации, ссылки на геофайлы и список серверов. Однако на практике любая из составляющих может отсутствовать, и тогда ее надо добавить отдельно.
+В общем случае полную конфигурацию составляют настройки приложения, правила маршрутизации, ссылки на геофайлы и список серверов. Если что-то отсутствует, потом добавляется отдельно.
 
 1. Сохраните присланный вам ZIP-файл в папку Загрузки.
 2. Меню ≡  - **Файл** - **Резервное копирование** - **Восстановление конфигурации** - **Локально** и выберите сохраненный ZIP-файл.
@@ -270,10 +270,10 @@
 2. В приложении нажмите ➕, затем **Вставить из буфера обмена** или похожий пункт.
 
 ### Импорт правил маршрутизации в Happ
-1. Нажмите ссылку на правила.
+1. Нажмите <a href="happ://routing/add/eyJibG9ja2lwIjpbXSwiYmxvY2tzaXRlcyI6WyJnZW9zaXRlOmNhdGVnb3J5LWFkcyJdLCJkaXJlY3RpcCI6WyJnZW9pcDpwcml2YXRlIl0sImRpcmVjdHNpdGVzIjpbImdlb3NpdGU6cHJpdmF0ZSIsImdlb3NpdGU6Y2F0ZWdvcnktcnUiLCJnZW9zaXRlOmNhdGVnb3J5LWlwLWdlby1kZXRlY3QiLCJkb21haW46cnUiLCJkb21haW46eG4tLXAxYWkiLCJkb21haW46c3UiLCJ5YW5kZXgubmV0IiwieWFzdGF0aWMubmV0IiwiZ3N0YXRpYy5jb20iLCJnZW9zaXRlOm1pY3Jvc29mdCIsImdlb3NpdGU6YXBwbGUiLCJnZW9zaXRlOmVwaWNnYW1lcyIsImdlb3NpdGU6cmlvdCIsImdlb3NpdGU6c3RlYW0iLCJnZW9zaXRlOnR3aXRjaCIsImdlb3NpdGU6cGludGVyZXN0IiwiZ2Vvc2l0ZTpmYWNlaXQiXSwiZG5zaG9zdHMiOnsibGtmbDIubmFsb2cucnUiOiIyMTMuMjQuNjQuMTc1IiwibGtucGQubmFsb2cucnUiOiIyMTMuMjQuNjQuMTgxIn0sImRvbWFpbnN0cmF0ZWd5IjoiSVBJZk5vbk1hdGNoIiwiZG9tZXN0aWNkbnNkb21haW4iOiJodHRwczovLzc3Ljg4LjguOC9kbnMtcXVlcnkiLCJkb21lc3RpY2Ruc2lwIjoiNzcuODguOC44IiwiZG9tZXN0aWNkbnN0eXBlIjoiRG9IIiwiZmFrZWRucyI6ZmFsc2UsImdlb2lwdXJsIjoiaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL0xveWFsc29sZGllci92MnJheS1ydWxlcy1kYXRAcmVsZWFzZS9nZW9pcC5kYXQiLCJnZW9zaXRldXJsIjoiaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL0xveWFsc29sZGllci92MnJheS1ydWxlcy1kYXRAcmVsZWFzZS9nZW9zaXRlLmRhdCIsImdsb2JhbHByb3h5Ijp0cnVlLCJsYXN0dXBkYXRlZCI6IjE3NzcyNzAxNzUiLCJuYW1lIjoiQXVyb3JhIiwicHJveHlpcCI6W10sInByb3h5c2l0ZXMiOlsiZ2Vvc2l0ZTpnb29nbGUtcGxheSIsImdlb3NpdGU6Z2l0aHViIiwiZ2Vvc2l0ZTp5b3V0dWJlIiwiZ2Vvc2l0ZTp0ZWxlZ3JhbSIsImdlb3NpdGU6aW5zdGFncmFtIiwiZ2Vvc2l0ZTp3aGF0c2FwcCIsImdlb3NpdGU6dHdpdHRlciIsImdlb3NpdGU6c291bmRjbG91ZCIsImdlb3NpdGU6b3BlbmFpIiwiZ2Vvc2l0ZTpkaXNjb3JkIl0sInJlbW90ZWRuc2RvbWFpbiI6Imh0dHBzOi8vOC44LjguOC9kbnMtcXVlcnkiLCJyZW1vdGVkbnNpcCI6IjguOC44LjgiLCJyZW1vdGVkbnN0eXBlIjoiRG9IIiwicm91dGVvcmRlciI6ImJsb2NrLWRpcmVjdC1wcm94eSJ9">ссылку на правила</a>.
 2. Откройте ⚙️ - Маршрутизация - и убедитесь, что 
 - маршрутизация включена 
-- в профиль Aurora нет ошибок скачивания гео-файлов
+- в профилe Aurora нет ошибок скачивания гео-файлов
 
 ## Диагностика проблем
 Здесь возможные проблемы и пути их решения. 
