@@ -53,7 +53,7 @@ sudo systemctl restart xray && sudo systemctl status xray && sudo journalctl -u 
 ### Диаграмма подключений
 Здесь вариант со схемой **Сервер 1 в РФ -> Сервер 2 за рубежом**. Для разнообразия примеров используется разный транспорт: от клиентов к серверу 1 - XTLS Vision, от сервера 1 к 2 - XHTTP. Еще один зарубежный сервер настраивается аналогично. 
 
-<img src="server-diag-basic.png" alt="screenshot">
+<img src="images/server-diag-basic.png" alt="screenshot">
 
 ### Конфигурационные файлы
 В файлах необходимо прописать свои параметры:
