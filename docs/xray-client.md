@@ -125,7 +125,7 @@
 [{"enabled":true,"locked":false,"network":"udp","outboundTag":"block","port":"443","remarks":"Блокировать QUIC"},{"domain":["geosite:category-ads-all"],"enabled":true,"locked":false,"outboundTag":"block","remarks":"Блокировать рекламу "},{"enabled":true,"locked":false,"outboundTag":"direct","protocol":["bittorent"],"remarks":"Торрент - напрямую"},{"enabled":true,"ip":["geoip:private"],"locked":false,"outboundTag":"direct","remarks":"Частные сети - напрямую"},{"domain":["geosite:private"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Частные домены - напрямую"},{"enabled":false,"ip":["1.0.0.1","1.1.1.1","8.8.8.8","8.8.4.4"],"locked":false,"outboundTag":"proxy","remarks":"DNS - прокси"},{"domain":["720pier.ru"],"enabled":true,"locked":false,"outboundTag":"proxy","remarks":"Избранные сайты - прокси"},{"domain":["geosite:category-ip-geo-detect"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Сервисы определения IP - напрямую"},{"domain":["yandex.net","yastatic.net","gstatic.com"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Избранные сайты - напрямую"},{"domain":["geosite:category-ru"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Российские домены - напрямую"},{"domain":["domain:ru","domain:xn--p1ai"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Домены .RU, .РФ - напрямую"},{"enabled":true,"ip":["geoip:ru"],"locked":false,"outboundTag":"direct","remarks":"Российские IP - напрямую"},{"enabled":true,"locked":false,"outboundTag":"proxy","port":"0-65535","remarks":"Все остальное - прокси"}]
 ```
 
-2. Меню ≡ - **Маршрутизация** - ︙(в правом верхнем углу) - **Импорт правил из буфера обмена**. Согласитесь на удаление существующих правил.
+2. Меню ≡ - **Маршрутизация** - ⋮ (в правом верхнем углу) - **Импорт правил из буфера обмена**. Согласитесь на удаление существующих правил.
 
 #### Проверка маршрутов в v2rayNG
 
@@ -183,7 +183,7 @@
 
 1. Скачайте архив [https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-windows-64-desktop.zip](https://github.com/2dust/v2rayN/releases/latest/download/v2rayN-windows-64-desktop.zip)
 2. Распакуйте архив и запустите **v2rayN.exe**.
-3. Если надо сменить язык, нажмите ︙(в правом верхнем углу) - выберите язык - нажмите **Выход** в верхнем меню.
+3. Если надо сменить язык, нажмите ⋮ (в правом верхнем углу) - выберите язык - нажмите **Выход** в верхнем меню.
 
 ### Импорт конфигурации в приложение
 
@@ -270,10 +270,17 @@
 2. В приложении нажмите ➕, затем **Вставить из буфера обмена** или похожий пункт.
 
 ### Импорт правил маршрутизации в Happ
-1. Нажмите ссылку на правила.
-2. Откройте ⚙️ - Маршрутизация - и убедитесь, что 
+1. Скопируйте эту ссылку в буфер обмена:
+```
+happ://routing/add/eyJibG9ja2lwIjpbXSwiYmxvY2tzaXRlcyI6WyJnZW9zaXRlOmNhdGVnb3J5LWFkcyJdLCJkaXJlY3RpcCI6WyJnZW9pcDpwcml2YXRlIl0sImRpcmVjdHNpdGVzIjpbImdlb3NpdGU6cHJpdmF0ZSIsImdlb3NpdGU6Y2F0ZWdvcnktcnUiLCJnZW9zaXRlOmNhdGVnb3J5LWlwLWdlby1kZXRlY3QiLCJkb21haW46cnUiLCJkb21haW46eG4tLXAxYWkiLCJkb21haW46c3UiLCJ5YW5kZXgubmV0IiwieWFzdGF0aWMubmV0IiwiZ3N0YXRpYy5jb20iLCJnZW9zaXRlOm1pY3Jvc29mdCIsImdlb3NpdGU6YXBwbGUiLCJnZW9zaXRlOmVwaWNnYW1lcyIsImdlb3NpdGU6cmlvdCIsImdlb3NpdGU6c3RlYW0iLCJnZW9zaXRlOnR3aXRjaCIsImdlb3NpdGU6cGludGVyZXN0IiwiZ2Vvc2l0ZTpmYWNlaXQiXSwiZG5zaG9zdHMiOnsibGtmbDIubmFsb2cucnUiOiIyMTMuMjQuNjQuMTc1IiwibGtucGQubmFsb2cucnUiOiIyMTMuMjQuNjQuMTgxIn0sImRvbWFpbnN0cmF0ZWd5IjoiSVBJZk5vbk1hdGNoIiwiZG9tZXN0aWNkbnNkb21haW4iOiJodHRwczovLzc3Ljg4LjguOC9kbnMtcXVlcnkiLCJkb21lc3RpY2Ruc2lwIjoiNzcuODguOC44IiwiZG9tZXN0aWNkbnN0eXBlIjoiRG9IIiwiZmFrZWRucyI6ZmFsc2UsImdlb2lwdXJsIjoiaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL0xveWFsc29sZGllci92MnJheS1ydWxlcy1kYXRAcmVsZWFzZS9nZW9pcC5kYXQiLCJnZW9zaXRldXJsIjoiaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL0xveWFsc29sZGllci92MnJheS1ydWxlcy1kYXRAcmVsZWFzZS9nZW9zaXRlLmRhdCIsImdsb2JhbHByb3h5Ijp0cnVlLCJsYXN0dXBkYXRlZCI6IjE3NzcyNzAxNzUiLCJuYW1lIjoiQXVyb3JhIiwicHJveHlpcCI6W10sInByb3h5c2l0ZXMiOlsiZ2Vvc2l0ZTp5b3V0dWJlIiwiZ2Vvc2l0ZTp0ZWxlZ3JhbSIsImdlb3NpdGU6aW5zdGFncmFtIiwiZ2Vvc2l0ZTp3aGF0c2FwcCIsImdlb3NpdGU6dHdpdHRlciIsImdlb3NpdGU6c291bmRjbG91ZCIsImdlb3NpdGU6b3BlbmFpIiwiZ2Vvc2l0ZTpkaXNjb3JkIl0sInJlbW90ZWRuc2RvbWFpbiI6Imh0dHBzOi8vOC44LjguOC9kbnMtcXVlcnkiLCJyZW1vdGVkbnNpcCI6IjguOC44LjgiLCJyZW1vdGVkbnN0eXBlIjoiRG9IIiwicm91dGVvcmRlciI6ImJsb2NrLWRpcmVjdC1wcm94eSJ9
+```   
+2. Откройте ⚙️ - **Маршрутизация** - ⋮ (в правом верхнем углу) - **Импортировать с буфера**
+3. Убедитесь, что:
 - маршрутизация включена 
-- в профилe Aurora нет ошибок скачивания гео-файлов
+- добавился профиль Aurora
+4. Перейдите в профиль Aurora и убедитесь, что нет ошибок скачивания гео-файлов.
+
+<img src="happ-routing.jpg" alt="screenshot">
 
 ## Диагностика проблем
 Здесь возможные проблемы и пути их решения. 
