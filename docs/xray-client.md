@@ -71,7 +71,7 @@
 2. В подразделе Assets выберите файл APK с **universal** в имени.
 3. Скачайте, установите.
 
-<img src="v2ray-client-download.png" alt="Screenshot" style="width: 40%; height: auto;">
+<img src="images/v2ray-client-download.png" alt="Screenshot" style="width: 40%; height: auto;">
 
 ### Импорт полной конфигурации в v2rayNG
 В общем случае полную конфигурацию составляют настройки приложения, правила маршрутизации, ссылки на геофайлы и список серверов. Если что-то отсутствует, потом добавляется отдельно.
