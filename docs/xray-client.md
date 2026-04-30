@@ -15,7 +15,6 @@
 - [Android v2rayNG](#android-v2rayng)
   - [Загрузка и установка v2rayNG](#загрузка-и-установка-v2rayng)
   - [Импорт полной конфигурации в v2rayNG](#импорт-полной-конфигурации-в-v2rayng)
-  - [Обновление геофайлов в v2rayNG](#обновление-геофайлов-в-v2rayng) 
   - [Импорт серверов в v2rayNG](#импорт-серверов-в-v2rayng)
     - [Импорт серверов в v2rayNG с помощью ссылки](#импорт-серверов-в-v2rayng-с-помощью-ссылки)
     - [Импорт серверов в v2rayNG с помощью подписки](#импорт-серверов-в-v2rayng-с-помощью-подписки)
@@ -23,6 +22,7 @@
   - [Выбор отдельных приложений в v2rayNG](#выбор-отдельных-приложений-в-v2rayng)
   - [Добавление маршрутов в v2rayNG](#добавление-маршрутов-в-v2rayng)
     - [Проверка маршрутов в v2rayNG](#проверка-маршрутов-в-v2rayng)
+  - [Обновление геофайлов в v2rayNG](#обновление-геофайлов-в-v2rayng) 
 
 - [Android Nekobox](#android-nekobox)
   - [Загрузка и установка Nekobox](#загрузка-и-установка-nekobox)
@@ -82,14 +82,6 @@
 
 <img src="images/v2rayng-restore-config.jpg" alt="Screenshot" style="width: 60%; height: auto;">
 
-### Обновление геофайлов в v2rayNG
-Геофайлы необходимы для корректной работы правил. Если какие-либо правила не подкреплены геофайлами, подключение к VPN не сработает.
-
-1. Меню ≡ - **Файлы ресурсов** - нажмите значок облака ☁️ в правом верхнем углу.
-2. По окончании загрузки убедитесь, что в списке нет файлов с пометкой "не найден".
-
-<img src="images/v2rayng-geofiles.jpg" alt="Screenshot" style="width: 60%; height: auto;">
-
 ### Импорт серверов в v2rayNG
 Есть несколько способов: сканирование QR-кода, импорт ссылки и даже импорт подписки на серверы.
 
@@ -122,15 +114,17 @@
 
 ### Выбор отдельных приложений в v2rayNG
 Чтобы только выбранные приложения ходили в обход блокировок:
-1. Меню ≡ - **Выбор приложений** - **Использовать выбор приложений**: включить
-2. Выберите из списка приложения, которые должны ходить через сервер. Если вам нужно посещать отдельные заблокированные сайты в браузере, выберите **не основной** браузер.
+1. Меню ≡ - **Выбор приложений** - **Использовать выбор приложений**: включите. Затем выберите из списка приложения, которые должны ходить через сервер. Если вам нужно посещать отдельные заблокированные сайты в браузере, выберите **не основной** браузер.
+2. Меню ≡ - **Маршрутизация** - - найдите правило **Избранные приложения - прокси** в конце списка - перейдите в режим редактирования, нажав на карандаш ✏️. В правиле нажмите значок, который на картинке↓ обозначе зеленой стрелкой, и добавьте в список свои приложения. Затем сохраните правило, как показывает синяя стрелка.
 
 <img src="images/v2rayNG-apps.png" alt="screenshot">
+
+Примечание. Выбор приложений в маршрутизации доступен начиная с версии 2.1.0.
 
 ### Добавление маршрутов в v2rayNG
 1. Скопируйте эти правила в буфер обмена:
 ```
-[{"enabled":true,"locked":false,"network":"udp","outboundTag":"block","port":"443","remarks":"Блокировать QUIC"},{"domain":["geosite:category-ads-all"],"enabled":true,"locked":false,"outboundTag":"block","remarks":"Блокировать рекламу "},{"enabled":true,"locked":false,"outboundTag":"direct","protocol":["bittorent"],"remarks":"Торрент - напрямую"},{"enabled":true,"ip":["geoip:private"],"locked":false,"outboundTag":"direct","remarks":"Частные сети - напрямую"},{"domain":["geosite:private"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Частные домены - напрямую"},{"enabled":false,"ip":["1.0.0.1","1.1.1.1","8.8.8.8","8.8.4.4"],"locked":false,"outboundTag":"proxy","remarks":"DNS - прокси"},{"domain":["720pier.ru"],"enabled":true,"locked":false,"outboundTag":"proxy","remarks":"Избранные сайты - прокси"},{"domain":["geosite:category-ip-geo-detect"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Сервисы определения IP - напрямую"},{"domain":["yandex.net","yastatic.net","gstatic.com"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Избранные сайты - напрямую"},{"domain":["geosite:category-ru"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Российские домены - напрямую"},{"domain":["domain:ru","domain:xn--p1ai"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Домены .RU, .РФ - напрямую"},{"enabled":true,"ip":["geoip:ru"],"locked":false,"outboundTag":"direct","remarks":"Российские IP - напрямую"},{"enabled":true,"locked":false,"outboundTag":"proxy","port":"0-65535","remarks":"Все остальное - прокси"}]
+[{"enabled":true,"locked":false,"outboundTag":"direct","protocol":["bittorent"],"remarks":"Торрент - напрямую"},{"enabled":true,"locked":false,"network":"udp","outboundTag":"block","port":"443","remarks":"Блокировать QUIC"},{"enabled":true,"ip":["geoip:private"],"locked":false,"outboundTag":"direct","remarks":"Частные сети - напрямую"},{"domain":["geosite:private"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Частные домены - напрямую"},{"domain":["geosite:category-ads-all"],"enabled":true,"locked":false,"outboundTag":"block","remarks":"Блокировать рекламу "},{"domain":["720pier.ru"],"enabled":true,"locked":false,"outboundTag":"proxy","remarks":"Избранные сайты .RU - прокси"},{"domain":["yandex.net","yastatic.net","gstatic.com"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Избранные сайты - напрямую"},{"domain":["geosite:category-ip-geo-detect","regexp:kaspersky"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Сервисы определения IP - напрямую"},{"domain":["domain:ru","domain:xn--p1ai","domain:su","geosite:category-ru","geosite:vk","geosite:yandex","geosite:mailru","geosite:mailru-group","geosite:rutube","geosite:avito","geosite:ozon","geosite:wildberries","geosite:sber","geosite:tbank-ru"],"enabled":true,"locked":false,"outboundTag":"direct","remarks":"Российские домены - напрямую"},{"enabled":true,"ip":["geoip:ru"],"locked":false,"outboundTag":"direct","remarks":"Российские IP - напрямую"},{"enabled":false,"ip":["ext:geocdn.dat:akamai"],"locked":false,"outboundTag":"direct","remarks":"Избранные CDN - напрямую (требует отдельного геофайла)"},{"enabled":true,"locked":false,"outboundTag":"proxy","process":["app.revanced.android.apps.youtube.music","app.revanced.android.youtube","com.deniscerri.ytdl","com.google.android.apps.youtube.music","com.google.android.youtube","com.instagram.android","com.openai.chatgpt","com.soundcloud.android","com.strava","com.twitter.android","com.whatsapp","org.schabi.newpipe","org.telegram.messenger","org.zwanoo.android.speedtest","tw.nekomimi.nekogram"],"remarks":"Избранные приложения - прокси"},{"enabled":true,"locked":false,"outboundTag":"proxy","port":"0-65535","remarks":"Все остальное - прокси"}]
 ```
 
 2. Меню ≡ - **Маршрутизация** - ⋮ (в правом верхнем углу) - **Импорт правил из буфера обмена**. Согласитесь на удаление существующих правил.
@@ -138,6 +132,14 @@
 #### Проверка маршрутов в v2rayNG
 
 Перезапустите подключение и убедитесь, что выбранные↑ вами приложения работают.
+
+### Обновление геофайлов в v2rayNG
+Геофайлы необходимы для корректной работы правил. Если какие-либо правила не подкреплены геофайлами, подключение к VPN не сработает.
+
+1. Меню ≡ - **Файлы ресурсов** - нажмите значок облака ☁️ в правом верхнем углу.
+2. По окончании загрузки убедитесь, что в списке нет файлов с пометкой "не найден".
+
+<img src="images/v2rayng-geofiles.jpg" alt="Screenshot" style="width: 60%; height: auto;">
 
 ## Android Nekobox
 Инструкции на этой странице подразумевают, что вам предоставлена конфигурация (файл JSON) для импорта в приложение. В конфигурацию входит:
