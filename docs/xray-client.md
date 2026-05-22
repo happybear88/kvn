@@ -63,11 +63,10 @@
 
 ### Загрузка и установка v2rayNG
 
-[https://github.com/2dust/v2rayNG/releases/](https://github.com/2dust/v2rayNG/releases/)
+[https://github.com/2dust/v2rayNG/releases/latest/](https://github.com/2dust/v2rayNG/releases/latest/)
 
-1. Выберите Latest, нежели pre-release
-2. В подразделе Assets выберите файл APK с **universal** в имени.
-3. Скачайте, установите.
+1. В подразделе Assets выберите файл APK с **universal** в имени.
+2. Скачайте, установите.
 
 <img src="images/v2ray-client-download.png" alt="Screenshot" style="width: 40%; height: auto;">
 
@@ -148,11 +147,10 @@
 
 ### Загрузка и установка Nekobox
 
-[https://github.com/MatsuriDayo/NekoBoxForAndroid/releases](https://github.com/MatsuriDayo/NekoBoxForAndroid/releases)
+[https://github.com/MatsuriDayo/NekoBoxForAndroid/releases/latest](https://github.com/MatsuriDayo/NekoBoxForAndroid/releases/latest)
 
-1. Выберите Latest, нежели pre-release
-2. В подразделе Assets выберите файл APK с **arm64-v8a** в имени.
-3. Скачайте, установите.
+1. В подразделе Assets выберите файл APK с **arm64-v8a** в имени.
+2. Скачайте, установите.
 
 <img src="images/nekobox-client-download.png" alt="Screenshot" style="width: 40%; height: auto;">
 
