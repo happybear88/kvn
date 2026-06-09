@@ -6,9 +6,7 @@
 
 **Содержание**
 
-- [Настройка приложений для подключения к серверу XRAY](#настройка-приложений-для-подключения-к-серверу-xray)
 - [Как работает обход блокировок](#как-работает-обход-блокировок)
-
 - [Android v2rayNG](#android-v2rayng)
   - [Загрузка и установка v2rayNG](#загрузка-и-установка-v2rayng)
   - [Импорт полной конфигурации в v2rayNG](#импорт-полной-конфигурации-в-v2rayng)
@@ -19,16 +17,14 @@
   - [Выбор отдельных приложений в v2rayNG](#выбор-отдельных-приложений-в-v2rayng)
   - [Добавление маршрутов в v2rayNG](#добавление-маршрутов-в-v2rayng)
     - [Проверка маршрутов в v2rayNG](#проверка-маршрутов-в-v2rayng)
-  - [Обновление геофайлов в v2rayNG](#обновление-геофайлов-в-v2rayng) 
-
+  - [Обновление геофайлов в v2rayNG](#обновление-геофайлов-в-v2rayng)
 - [Android Nekobox](#android-nekobox)
   - [Загрузка и установка Nekobox](#загрузка-и-установка-nekobox)
   - [Импорт конфигурации в Nekobox](#импорт-конфигурации-в-nekobox)
-  - [Импорт серверов в Nekobox](#импорт-серверов-в-nekobox-с-помощью-ссылки)
+  - [Импорт серверов в Nekobox с помощью ссылки](#импорт-серверов-в-nekobox-с-помощью-ссылки)
   - [Управление состоянием подключения Nekobox](#управление-состоянием-подключения-nekobox)
   - [Выбор отдельных приложений в Nekobox](#выбор-отдельных-приложений-в-nekobox)
   - [Обновление подписки в Nekobox](#обновление-подписки-в-nekobox)
-
 - [Windows](#windows)
   - [Загрузка и установка](#загрузка-и-установка)
   - [Импорт конфигурации в приложение](#импорт-конфигурации-в-приложение)
@@ -41,16 +37,16 @@
   - [Настройка маршрутизации](#настройка-маршрутизации)
   - [Добавление маршрутов](#добавление-маршрутов)
     - [Проверка маршрутов](#проверка-маршрутов)
-
 - [iOS](#ios)
-  - [Приложения](#приложения)
-  - [Импорт серверов в Happ с помощью ссылки](#импорт-серверов-в-happ-с-помощью-ссылки)
-  - [Импорт правил маршрутизации в Happ](#импорт-правил-маршрутизации-в-happ)
-
-- [Диагностика проблем](#диагностика-проблем)
+  - [Happ](#happ)
+    - [Импорт серверов в Happ с помощью ссылки](#импорт-серверов-в-happ-с-помощью-ссылки)
+    - [Импорт правил маршрутизации в Happ](#импорт-правил-маршрутизации-в-happ)
+  - [Sing-box VT](#sing-box-vt)
+  - [Диагностика проблем](#диагностика-проблем)
   - [Сбор логов](#сбор-логов)
     - [Android v2rayNG](#android-v2rayng-1)
     - [Windows](#windows-1)
+
 
 ## Как работает обход блокировок
 
@@ -274,16 +270,18 @@
 Примечание. В зависимости от набора правил маршрутизации на клиенте и сервере, зарубежные сервисы определения ip-адреса могут показывать адрес вашего провайдера либо не открываться вообще.
 
 ## iOS
-### Приложения
+Приложения
 - [Happ](https://apps.apple.com/ru/app/happ-proxy-utility-plus/id6746188973)
 - [One Xray](https://apps.apple.com/ru/app/onexray/id6745748773)
 - [V2Box](https://apps.apple.com/ru/app/v2box-v2ray-client/id6446814690) (удален из AppStore)
 
-### Импорт серверов в Happ с помощью ссылки
+### Happ
+
+#### Импорт серверов в Happ с помощью ссылки
 1. Скопируйте присланную ссылку вида VLESS:// в буфер обмена.
 2. В приложении нажмите ➕, затем **Вставить из буфера обмена** или похожий пункт.
 
-### Импорт правил маршрутизации в Happ
+#### Импорт правил маршрутизации в Happ
 1. Скопируйте эту ссылку в буфер обмена:
 ```
 happ://routing/add/eyJibG9ja2lwIjpbXSwiYmxvY2tzaXRlcyI6WyJnZW9zaXRlOmNhdGVnb3J5LWFkcyJdLCJkaXJlY3RpcCI6WyJnZW9pcDpwcml2YXRlIl0sImRpcmVjdHNpdGVzIjpbImdlb3NpdGU6cHJpdmF0ZSIsImdlb3NpdGU6Y2F0ZWdvcnktcnUiLCJnZW9zaXRlOmNhdGVnb3J5LWlwLWdlby1kZXRlY3QiLCJkb21haW46cnUiLCJkb21haW46eG4tLXAxYWkiLCJkb21haW46c3UiLCJ5YW5kZXgubmV0IiwieWFzdGF0aWMubmV0IiwiZ3N0YXRpYy5jb20iLCJnZW9zaXRlOm1pY3Jvc29mdCIsImdlb3NpdGU6YXBwbGUiLCJnZW9zaXRlOmVwaWNnYW1lcyIsImdlb3NpdGU6cmlvdCIsImdlb3NpdGU6c3RlYW0iLCJnZW9zaXRlOnR3aXRjaCIsImdlb3NpdGU6cGludGVyZXN0IiwiZ2Vvc2l0ZTpmYWNlaXQiLCJnZW9zaXRlOnZrIiwiZ2Vvc2l0ZTp5YW5kZXgiLCJnZW9zaXRlOm1haWxydSIsImdlb3NpdGU6bWFpbHJ1LWdyb3VwIiwiZ2Vvc2l0ZTpydXR1YmUiLCJnZW9zaXRlOmF2aXRvIiwiZ2Vvc2l0ZTpvem9uIiwiZ2Vvc2l0ZTp3aWxkYmVycmllcyIsImdlb3NpdGU6c2JlciIsImdlb3NpdGU6dGJhbmstcnUiXSwiZG5zaG9zdHMiOnsibGtmbDIubmFsb2cucnUiOiIyMTMuMjQuNjQuMTc1IiwibGtucGQubmFsb2cucnUiOiIyMTMuMjQuNjQuMTgxIn0sImRvbWFpbnN0cmF0ZWd5IjoiSVBJZk5vbk1hdGNoIiwiZG9tZXN0aWNkbnNkb21haW4iOiJodHRwczovLzc3Ljg4LjguOC9kbnMtcXVlcnkiLCJkb21lc3RpY2Ruc2lwIjoiNzcuODguOC44IiwiZG9tZXN0aWNkbnN0eXBlIjoiRG9IIiwiZmFrZWRucyI6ZmFsc2UsImdlb2lwdXJsIjoiaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL0xveWFsc29sZGllci92MnJheS1ydWxlcy1kYXRAcmVsZWFzZS9nZW9pcC5kYXQiLCJnZW9zaXRldXJsIjoiaHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL0xveWFsc29sZGllci92MnJheS1ydWxlcy1kYXRAcmVsZWFzZS9nZW9zaXRlLmRhdCIsImdsb2JhbHByb3h5Ijp0cnVlLCJsYXN0dXBkYXRlZCI6IjE3NzcyNzAxNzUiLCJuYW1lIjoiQXVyb3JhIiwicHJveHlpcCI6W10sInByb3h5c2l0ZXMiOlsiZ2Vvc2l0ZTp5b3V0dWJlIiwiZ2Vvc2l0ZTp0ZWxlZ3JhbSIsImdlb3NpdGU6aW5zdGFncmFtIiwiZ2Vvc2l0ZTp3aGF0c2FwcCIsImdlb3NpdGU6dHdpdHRlciIsImdlb3NpdGU6c291bmRjbG91ZCIsImdlb3NpdGU6b3BlbmFpIiwiZ2Vvc2l0ZTpkaXNjb3JkIl0sInJlbW90ZWRuc2RvbWFpbiI6Imh0dHBzOi8vOC44LjguOC9kbnMtcXVlcnkiLCJyZW1vdGVkbnNpcCI6IjguOC44LjgiLCJyZW1vdGVkbnN0eXBlIjoiRG9IIiwicm91dGVvcmRlciI6ImJsb2NrLWRpcmVjdC1wcm94eSJ9
@@ -296,7 +294,23 @@ happ://routing/add/eyJibG9ja2lwIjpbXSwiYmxvY2tzaXRlcyI6WyJnZW9zaXRlOmNhdGVnb3J5L
 
 <img src="images/happ-routing.jpg" alt="screenshot">
 
-## Диагностика проблем
+### Sing-box VT
+[https://apps.apple.com/ru/app/sing-box-vt/id6673731168](https://apps.apple.com/ru/app/sing-box-vt/id6673731168)
+
+Приложение не поддерживает импорт ссылок VLESS. Возможен только импорт профиля в формате JSON.
+
+1. Сохраните в любой папке присланный вам файл `singbox.json`.
+2. **Profiles** - **New profile**:
+- **Name**: singbox
+- **Type**: Local
+- **File** - **Import** - **Create new** 
+- **File Path** - **Choose** - выберите сохраненный файл `singbox.json`
+3. Нажмите **Create**.  Созданный профиль отобразится в списке профилей.
+4. **Dashboard** - **Enabled**: включить. Согласитесь с любыми предупреждениями.
+
+<img src="images/singbox.png" alt="screenshot">
+
+### Диагностика проблем
 Здесь возможные проблемы и пути их решения. 
 
 ### Сбор логов
