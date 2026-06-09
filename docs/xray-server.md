@@ -1,5 +1,20 @@
 # Настройка сервера XRAY на VPS (быстрый старт)
 
+**Содержание**
+<!-- ``- [Настройка сервера XRAY на VPS (быстрый старт)](#настройка-сервера-xray-на-vps-быстрый-старт)
+  - [Об этом документе](#об-этом-документе)
+  - [Стратегия](#стратегия)
+  - [Установка и настройка сервера XRAY](#установка-и-настройка-сервера-xray)
+    - [Диаграмма подключений](#диаграмма-подключений)
+    - [Конфигурационные файлы](#конфигурационные-файлы)
+      - [Сервер 1 в РФ](#сервер-1-в-рф)
+      - [Сервер 2 в Европе](#сервер-2-в-европе)
+    - [Загрузка и обновление геофайлов](#загрузка-и-обновление-геофайлов)
+      - [Скрипт загрузки геофайлов](#скрипт-загрузки-геофайлов)
+      - [Обновление геофайлов по расписанию](#обновление-геофайлов-по-расписанию)
+    - [Ротация логов](#ротация-логов)
+ -->
+
 ## Об этом документе
 Это нечто вроде личных заметок, вынесенных в паблик. Получился "еще один гайд" - поверхностный, чтобы не раздумывая копировать и вставлять команды в консоль, и достаточный для новчика. Остальное в документации: [https://xtls.github.io/ru/config/](https://xtls.github.io/ru/config/).
 
@@ -72,6 +87,8 @@ sudo systemctl restart xray && sudo systemctl status xray && sudo journalctl -u 
 ```json
 {
     "log": {
+        "access": "/var/log/xray/access.log",
+        "error": "/var/log/xray/error.log",
         "loglevel": "warning"
     },
     "inbounds": [
@@ -316,6 +333,8 @@ sudo systemctl restart xray && sudo systemctl status xray && sudo journalctl -u 
 ```json
 {
     "log": {
+        "access": "/var/log/xray/access.log",
+        "error": "/var/log/xray/error.log",
         "loglevel": "warning"
     },
     "inbounds": [
@@ -418,3 +437,110 @@ sudo systemctl restart xray && sudo systemctl status xray && sudo journalctl -u 
 Пояснения
 - Сервер 2 принимает трафик только от Сервера 1. То есть в объекте `inbounds` единственный клиент - это Сервер 1, и он имеет тот же UUID, что в объекте `outbounds` конфигурации Сервера 1
 - Весь трафик выпускается наружу без фильтрации, но можно дополнительно применять правила машрутизации - блокировать или перенаправлять на следующий сервер, если имеется
+
+### Загрузка и обновление геофайлов
+В комплекте с сервером идут какие-то геофайлы, но они не обновляются. В примере ниже файлы берутся из репозитория [https://github.com/Loyalsoldier/v2ray-rules-dat](https://github.com/Loyalsoldier/v2ray-rules-dat).
+
+#### Скрипт загрузки геофайлов
+
+1.Создайте файл `nano xray-geo.sh`
+2. Вставьте код:
+```
+#!/bin/bash
+# doc https://xtls.github.io/en/config/features/env.html#resource-file-path
+# default: /usr/local/share/xray/
+
+
+LOGFILE='/var/log/geofiles.update.log'
+
+echo "$(date) Start......." >> $LOGFILE
+
+rm -rf /tmp/geodata && mkdir /tmp/geodata
+cd /tmp/geodata
+
+if  [ $? -eq 0 ]; then
+echo "$(date) Download phase is starting...." >> $LOGFILE
+else
+echo "$(date) Something went wrong during folders preparation. Exiting..." >> $LOGFILE
+exit 1
+fi
+
+wget -q https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat && \
+wget -q https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat && \
+wget -q -O geocdn.dat https://github.com/PentiumB/CDN-RuleSet/releases/latest/download/geoip.dat
+
+if  [ $? -eq 0 ]; then
+echo "$(date) Download phase completed successfully" >> $LOGFILE
+if [ -d "/usr/local/share/xray/backup" ]; then
+  cp /usr/local/share/xray/geo*.dat /usr/local/share/xray/backup/
+else
+  mkdir /usr/local/share/xray/backup && cp /usr/local/share/xray/geo*.dat /usr/local/share/xray/backup/
+fi
+
+cp /tmp/geodata/geo*.dat /usr/local/share/xray/
+echo "$(date) Download phase completed successfully" >> $LOGFILE
+else
+echo "$(date) Download phase did not completed successfully. Exiting" >> $LOGFILE
+exit 1
+fi
+
+
+if  [ $? -eq 0 ]; then
+systemctl restart xray.service && echo "$(date) Service Restart completed successfully" >> $LOGFILE
+else
+echo "$(date) Backup & Replace phase did not completed successfully" >> $LOGFILE
+fi
+```
+3. Сделайте скрипт исполняемым: `chmod +x xray-geo.sh`
+
+#### Обновление геофайлов по расписанию
+
+1. Откройте планировщик: `sudo crontab -e`
+2. Вставьте: 
+```
+CRON_TZ=UTC
+5 6 * * * /home/user/xray-geo.sh
+```
+
+### Ротация логов
+
+Ротировать логи рекомендуется для экономии места, особенно если уровень выше warn.
+
+1. Выполните `sudo nano /etc/logrotate.d/xray`
+2. Вставьте код и сохраните
+```
+/var/log/xray/error.log {
+    size 100M
+    rotate 5
+    daily
+    compress
+    copytruncate
+    maxage 7
+}
+
+/var/log/xray/access.log {
+    size 300M
+    rotate 5
+    daily
+    compress
+    copytruncate
+    maxage 7
+}
+```
+3. Проверьте
+```
+sudo logrotate -f /etc/logrotate.d/xray
+sudo ls -lh /var/log/xray
+```
+
+Если logrotate не установлен, установите
+```
+sudo apt update
+sudo apt install logrotate -y
+```
+
+Примеры поиска по логам:
+```
+grep "something" /var/log/xray/access.log
+zgrep "something" /var/log/xray/*.gz
+```
