@@ -443,8 +443,10 @@ sudo systemctl restart xray && sudo systemctl status xray && sudo journalctl -u 
 
 #### Скрипт загрузки геофайлов
 
-1.Создайте файл `nano xray-geo.sh`
+1. Создайте файл `nano xray-geo.sh`
+
 2. Вставьте код:
+
 ```
 #!/bin/bash
 # doc https://xtls.github.io/en/config/features/env.html#resource-file-path
@@ -491,12 +493,14 @@ else
 echo "$(date) Backup & Replace phase did not completed successfully" >> $LOGFILE
 fi
 ```
+
 3. Сделайте скрипт исполняемым: `chmod +x xray-geo.sh`
 
 #### Обновление геофайлов по расписанию
 
 1. Откройте планировщик: `sudo crontab -e`
-2. Вставьте: 
+2. Вставьте код: 
+
 ```
 CRON_TZ=UTC
 5 6 * * * /home/user/xray-geo.sh
@@ -507,7 +511,9 @@ CRON_TZ=UTC
 Ротировать логи рекомендуется для экономии места, особенно если уровень выше warn.
 
 1. Выполните `sudo nano /etc/logrotate.d/xray`
+
 2. Вставьте код и сохраните
+
 ```
 /var/log/xray/error.log {
     size 100M
@@ -527,7 +533,9 @@ CRON_TZ=UTC
     maxage 7
 }
 ```
+
 3. Проверьте
+
 ```
 sudo logrotate -f /etc/logrotate.d/xray
 sudo ls -lh /var/log/xray
