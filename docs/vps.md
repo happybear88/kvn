@@ -56,7 +56,7 @@ ssh
 ```
 Если не найден, в Windows включить: Win+I - Manage optional features - включить OpenSSH client.
 
-2. Создать пару ключей (принять дефолты, сгенерировать и сохранить парольную фразу). Файлы будут сохранены в %userprofile%\.ssh.
+2. Создать пару ключей (принять дефолты, сгенерировать и сохранить парольную фразу). Файлы будут сохранены в `%userprofile%\.ssh`.
 ```
 ssh-keygen -t rsa
 ```
@@ -73,7 +73,7 @@ ssh -i "$env:userprofile\.ssh\id_rsa" happybear@ip
 ```
 
 ## Отключение парольного доступа
-**Важно!** Только после того, как настроен и проверен доступ по сертификату.
+**Важно!** Только после того, как настроен и проверен доступ с парой ключей.
 
 ```
 sudo nano /etc/ssh/sshd_config
@@ -124,7 +124,7 @@ curl и ufw могут быть установлены в Ubuntu.
 
 ```
 sudo apt-get update && sudo apt-get upgrade
-sudo apt install curl
+sudo apt install curl -y
 sudo apt install ufw -y
 sudo apt install net-tools -y
 ```
