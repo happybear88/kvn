@@ -78,7 +78,7 @@ sudo systemctl restart xray && sudo systemctl status xray && sudo journalctl -u 
 - произвольные адреса e-mail каждого клиента (необязательно, но они могут упростить анализ логов и/или маршрутизацию)
 - SNI - адрес легитимного сервера (вместо `example.sni`), под который будет маскироваться ваш сервер. Выше в списке - лучше:
   -  свой домен на том же сервере, замаскированный под корпоративный бэкенд
-  -  крупный чужой домен на том же сервере, сканирование можно выполнить с помощью [RealiTLScanner](https://github.com/XTLS/RealiTLScanner/releases):
+  -  крупный чужой домен в той же подсети, сканирование можно выполнить с помощью [RealiTLScanner](https://github.com/XTLS/RealiTLScanner/releases):
   `.\RealiTLScanner-windows-64.exe -addr <VPS IP>`
   -  крупный чужой домен в стране сервера
 
