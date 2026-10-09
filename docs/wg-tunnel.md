@@ -4,9 +4,9 @@
 
 1. Сохраните на устройстве файлы:
 
-- Файл с конфигурацией приложения: [wg-tunnel-db-2026-10-09-Default.sqlite3](https://github.com/happybear88/kvn/raw/refs/heads/main/docs/files/wg-tunnel-db-2026-10-09-Default.sqlite3). Если не получается сохранить, скачайте его же [wg-tunnel-db-2026-10-09-Default.zip](https://github.com/happybear88/kvn/raw/refs/heads/main/docs/files/wg-tunnel-db-2026-10-09-Default.zip) и распакуйте архив.
+   - Файл с конфигурацией приложения: [wg-tunnel-db-2026-10-09-Default.sqlite3](https://github.com/happybear88/kvn/raw/refs/heads/main/docs/files/wg-tunnel-db-2026-10-09-Default.sqlite3). Если не получается сохранить, скачайте его же [wg-tunnel-db-2026-10-09-Default.zip](https://github.com/happybear88/kvn/raw/refs/heads/main/docs/files/wg-tunnel-db-2026-10-09-Default.zip) и распакуйте архив.
 
-- Присланный вам лично файл с настройками подключения: имя начинается с **0825**. Этот файл можно использовать одновременно только на одном устройстве. 
+   - Присланный вам лично файл с настройками подключения: имя начинается с **0825**. Этот файл можно использовать одновременно только на одном устройстве. 
 
 2. Установите [WG Tunnel](https://play.google.com/store/apps/details?id=com.zaneschepke.wireguardautotunnel) и откройте приложение. Если у вас английский язык, измените в ⚙️ - Appearance - Language.
 
